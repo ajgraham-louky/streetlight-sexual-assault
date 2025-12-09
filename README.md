@@ -311,3 +311,4 @@ For questions or contributions regarding this analysis, please contact the proje
 
 Last Updated: December 2023
 Data Source: Louisville Metro Police Department & 311 Service Requests
+
