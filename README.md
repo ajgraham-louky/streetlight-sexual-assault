@@ -2,6 +2,7 @@
 
 ## Introduction
 
+Original author: Andrew Mavizha, LMPHW Intern Fall 2025.
 This project investigates the relationship between street lighting infrastructure and sexual assault incidents in Louisville, Kentucky during 2023. The analysis combines data from city 311 service requests for streetlight maintenance with official sexual assault crime reports to examine whether areas with higher concentrations of streetlight requests correlate with sexual assault patterns, particularly during nighttime hours.
 
 The project aims to:
@@ -312,5 +313,6 @@ For questions or contributions regarding this analysis, please contact the proje
 
 Last Updated: December 2023
 Data Source: Louisville Metro Police Department & 311 Service Requests
+
 
 
