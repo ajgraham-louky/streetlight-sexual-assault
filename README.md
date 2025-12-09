@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This project investigates the relationship between street lighting infrastructure and sexual assault incidents in Louisville, Kentucky during 2023. The analysis combines data from city 311 service requests for streetlight maintenance with official sexual assault crime reports to examine whether areas with higher concentrations of streetlight requests correlate with sexual assault patterns, particularly during nighttime hours.
+This project investigates the relationship between street lighting infrastructure and sexual assault rates in Louisville, Kentucky during 2023. The analysis combines data from city 311 service requests for streetlight maintenance with official sexual assault crime reports to examine whether areas with higher concentrations of streetlight requests correlate with sexual assault patterns, particularly during nighttime hours.
 
 The project aims to:
 - Analyze the geographic and temporal distribution of sexual assault incidents across council districts
@@ -67,7 +67,7 @@ The project consists of three main Jupyter notebooks that should be run in seque
 ### 1. Sexual Assaults Analysis (`sexual assaults analysis.ipynb`)
 This notebook performs exploratory data analysis on sexual assault incidents:
 - Loads and cleans the assault incident dataset
-- Filters for 2023 incidents and nighttime occurrences (6 PM - 6 AM)
+- Filters for 2023 incidents and nighttime occurrences
 - Analyzes assault patterns by:
   - Gender of victims
   - Age distribution
@@ -133,7 +133,7 @@ Street-lighting-impact-on-urban-sexual-assaults-in-Louisville-Metro-2023-main/
 
 2. **Feature Engineering**
    - Extract temporal features (hour, month, year) from timestamps
-   - Create nighttime flag for assault incidents (6 PM - 6 AM)
+   - Create nighttime flag for assault incidents
    - Normalize district identifiers across datasets
 
 3. **Exploratory Analysis**
@@ -237,7 +237,7 @@ When modifying or updating the analysis, ensure that new visualizations are save
 
 The analysis reveals:
 - Significant geographic variation in both streetlight requests and assault incidents across council districts
-- Temporal clustering of assaults during nighttime hours (6 PM - 6 AM)
+- Temporal clustering of assaults during nighttime hours
 - Potential associations between areas with high streetlight concerns and elevated assault rates
 - Demographic patterns in victimization across age, gender, and race
 
@@ -279,3 +279,4 @@ For questions or contributions regarding this analysis, please contact the proje
 
 Last Updated: December 2023
 Data Source: Louisville Metro Police Department & 311 Service Requests
+
