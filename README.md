@@ -16,6 +16,7 @@ The project aims to:
 - Python 3.8 or higher
 - Jupyter Notebook or Jupyter Lab
 - pip or conda package manager
+- ArcGis software
 
 ### Required Dependencies
 
@@ -133,7 +134,7 @@ Street-lighting-impact-on-urban-sexual-assaults-in-Louisville-Metro-2023-main/
 
 2. **Feature Engineering**
    - Extract temporal features (hour, month, year) from timestamps
-   - Create nighttime flag for assault incidents (6 PM - 6 AM)
+   - Create nighttime flag for sexual assaults incidents
    - Normalize district identifiers across datasets
 
 3. **Exploratory Analysis**
@@ -311,4 +312,5 @@ For questions or contributions regarding this analysis, please contact the proje
 
 Last Updated: December 2023
 Data Source: Louisville Metro Police Department & 311 Service Requests
+
 
