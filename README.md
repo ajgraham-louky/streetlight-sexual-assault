@@ -3,7 +3,9 @@
 ## Introduction
 
 
-Original author: Andrew Mavizha, LMPHW Intern Fall 2025.
+#Original author: Andrew Mavizha, LMPHW Intern Fall 2025.
+#Revision to include update to definition of daytime/nighttime 
+
 This project investigates the relationship between street lighting infrastructure and sexual assault incidents in Louisville, Kentucky during 2023. The analysis combines data from city 311 service requests for streetlight maintenance with official sexual assault crime reports to examine whether areas with higher concentrations of streetlight requests correlate with sexual assault patterns, particularly during nighttime hours.
 To ensure precise identification of nighttime incidents, sunset and sunrise times were obtained from the U.S. Naval Observatory for each day in 2023. The `sunset&sunrise_times.txt` file contains these daily records, which were used to accurately define the nighttime window (from sunset to sunrise of the following day) for temporal analysis across the entire year.
 The project aims to:
