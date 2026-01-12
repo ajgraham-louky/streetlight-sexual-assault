@@ -3,8 +3,8 @@
 ## Introduction
 
 
-#Original author: Andrew Mavizha, LMPHW Intern Fall 2025.
-#Revision to include update to definition of daytime/nighttime 
+### Original author: Andrew Mavizha, LMPHW Intern Fall 2025.
+### Updates added by Angela Graham - Jan 2026
 
 This project investigates the relationship between street lighting infrastructure and sexual assault incidents in Louisville, Kentucky during 2023. The analysis combines data from city 311 service requests for streetlight maintenance with official sexual assault crime reports to examine whether areas with higher concentrations of streetlight requests correlate with sexual assault patterns, particularly during nighttime hours.
 To ensure precise identification of nighttime incidents, sunset and sunrise times were obtained from the U.S. Naval Observatory for each day in 2023. The `sunset&sunrise_times.txt` file contains these daily records, which were used to accurately define the nighttime window (from sunset to sunrise of the following day) for temporal analysis across the entire year.
@@ -43,6 +43,7 @@ category-encoders
 xgboost
 lightgbm
 scipy
+os
 ```
 
 ### Setup Instructions
@@ -67,15 +68,29 @@ pip install pandas numpy scikit-learn imbalanced-learn matplotlib plotnine seabo
 ```
 
 4. Ensure you have the following data files in the project directory:
-   - `assault incidents data.csv` - Sexual assault incident records
+   - `streetlightcouncil.csv` - Sexual assault incident records (open records provided by LMPD, 2018-2023. Includes Metro Council District number spatially joined to data)
+   - `sunset&sunrise_times{year}.txt` - Data downloaded from https://aa.usno.navy.mil/data/RS_OneYear for Louisville, KY 2018-2023 (one file per year)
+   - `DST.txt` - Data downloaded from https://aa.usno.navy.mil/ with start and stop times for daylight savings every year 2018-2023
+   - `crime_{year}.csv` - Data downloaded from https://data.louisvilleky.gov/. Louisville Metro Crime Data for years 2018-2023.
    - `311_2023.csv` - City 311 service requests (including streetlight requests)
 
 ## Usage
 
 The project consists of three main Jupyter notebooks that should be run in sequence:
 
-### 1. Sexual Assaults Analysis (`sexual assaults analysis.ipynb`)
-This notebook performs exploratory data analysis on sexual assault incidents:
+### 1a. Sexual Assaults Data Prep (`sexual_assaults_dataprep.ipynb`)
+This notebook performs basic data preperation tasks on the LMPD data
+- Loads data set and performs basic cleaning to date/time
+- Processes the sunset/sunrise data into a dataframe and adjusts for daylight savings, adds a nighttime flag 
+- Merges in the location/premise type variable from the open data records
+
+**Run:**
+```bash
+jupyter notebook "sexual_assaults_dataprep.ipynb"
+```
+
+### 1b. Sexual Assaults Analysis (`sexual assaults analysis.ipynb`)
+This was Andrew's notebook that performs exploratory data analysis on sexual assault incidents.  There is some redundancy with the data prep file. 
 - Loads and cleans the assault incident dataset
 - Filters for 2023 incidents and nighttime occurrences.
 - Analyzes assault patterns by:
@@ -315,3 +330,4 @@ For questions or contributions regarding this analysis, please contact the proje
 
 Last Updated: December 2023
 Data Source: Louisville Metro Police Department & 311 Service Requests
+
